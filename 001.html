@@ -1,0 +1,57 @@
+<!-- index.html (Father Page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body { font-family: Times New Roman, sans-serif; text-align: left; margin: 0; padding: 0; }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 15px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .title-container {
+            margin-top: 20px;
+        }
+        .title {
+            cursor: pointer; 
+            color: blue; 
+            text-decoration: underline; 
+            margin: 10px; 
+            font-size: 18px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="003.html">About</a>
+    </div>
+    <h1>Contextual English for Adult Learners</h1>
+    <div class="title-container">
+	<a href="002.html">AT A COFFEE SHOP</a>
+       <!-- <div class="title" onclick="navigateToSon('002.html')">AT A COFFEE SHOP</div>
+        <div class="title" onclick="navigateToSon('Title 2')">Title 2</div>
+        <div class="title" onclick="navigateToSon('Title 3')">Title 3</div> -->
+    </div>
+    
+    <script>
+        function navigateToSon(title) {
+            window.location.href = `002.html?title=${encodeURIComponent(title)}`;
+        }
+    </script>
+</body>
+</html>
